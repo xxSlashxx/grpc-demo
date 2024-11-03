@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "de.slash.stubs";
+option java_multiple_files = true;
+
+message ProductRequest {
+    string name = 1;
+    string price = 2;
+}
+
+message ProductResponse {
+    int64 id = 1;
+    string name = 2;
+    string price = 3;
+}
+
+message ProductIdRequest {
+    int64 id = 1;
+}
+
+message ProductIdResponse {
+    int64 id = 1;
+}
+
+service ProductService {
+  rpc CreateProduct(stream ProductRequest) returns (stream ProductIdResponse);
+  rpc GetProduct(stream ProductIdRequest) returns (stream ProductResponse);
+  rpc DeleteProduct(stream ProductIdRequest) returns (google.protobuf.Empty);
+}
