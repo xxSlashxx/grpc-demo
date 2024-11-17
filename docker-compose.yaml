@@ -1,0 +1,6 @@
+services:
+  products-service:
+    container_name: grpc-demo
+    build: .
+    ports:
+      - "9090:9090"
