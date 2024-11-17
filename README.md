@@ -46,7 +46,7 @@ The service's endpoints can be accessed through `grpc://localhost:9090`.
 
 ## Example DeleteProduct request
     {
-        "id": "5"
+        "id": "4"
     }
 
 ### Testing
