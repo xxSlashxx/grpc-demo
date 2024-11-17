@@ -33,5 +33,24 @@ This demo consists of the following service:
 ### Accessing the Services
 The service's endpoints can be accessed through `grpc://localhost:9090`.
 
+## Example CreateProduct request
+    {
+        "name": "Clean Code",
+        "price": "29.99"
+    }
+
+## Example GetProduct request
+    {
+        "id": "4"
+    }
+
+## Example DeleteProduct request
+    {
+        "id": "5"
+    }
+
+### Testing
+You can test the gRPC service using tools like Postman.
+
 ### Configuration
 Configuration settings can be found in the application.properties files located in the service's src/main/resources directory. You can customize properties like database connections and port numbers.
